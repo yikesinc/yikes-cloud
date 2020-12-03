@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: YIKES Starter
+Theme Name: The YIKES Starter Theme
 Theme URI: http://yikesinc.com
 Author: YIKES, Inc.
 Author URI: http://yikesinc.com
@@ -149,8 +149,7 @@ blockquote .wp-block-quote__citation, blockquote cite {
 .screen-reader-text:focus {
   background-color: #eee;
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #444;
   display: block;
   font-size: 1em;
@@ -191,6 +190,10 @@ blockquote .wp-block-quote__citation, blockquote cite {
   color: #fff;
 }
 .pagination .page-item .page-link, .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
 }
 .pagination .page-item.active .page-link {
@@ -373,6 +376,13 @@ input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, inpu
   background-color: #fff;
   border-color: #80bdff;
 }
+textarea::-webkit-input-placeholder, select::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder {
+  color: #868e96;
+  opacity: 1;
+}
 textarea:-ms-input-placeholder, select:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder,
 input[type="datetime-local"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder,
 input[type="number"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder,
@@ -405,6 +415,7 @@ button, input[type="button"], input[type="submit"] {
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   padding: 0.5rem 0.75rem;
@@ -431,8 +442,7 @@ button, input[type="button"], input[type="submit"] {
   background-color: #000;
 }
 .navbar.main-nav .navbar-nav {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .navbar.main-nav ul.navbar-nav {
   margin-top: 0;
@@ -474,8 +484,7 @@ button, input[type="button"], input[type="submit"] {
 .navbar.main-nav ul.navbar-nav > li.nav-item.search > .nav-link .menu-link-text:focus {
   background-color: #eee;
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #444;
   display: block;
   font-size: 1em;
@@ -625,8 +634,7 @@ button, input[type="button"], input[type="submit"] {
 .widget_nav_menu .menu-social-menu-container ul li a:focus {
   background-color: #eee;
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #444;
   display: block;
   font-size: 1em;
@@ -854,6 +862,7 @@ img {
 
 .img-border {
   border: 1px solid #ccc;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   padding: 6px;
 }
@@ -949,7 +958,14 @@ ul.comment-list li .comment-author {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
   width: 128px;
 }
@@ -971,6 +987,10 @@ ul.comment-list li .comment-content {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 ul.comment-list li .comment-content .comment-metadata {

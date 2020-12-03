@@ -50,8 +50,16 @@ module.exports = function(grunt) {
 					event:['all']
 				},
 			},
-			sass_partials: { // sass partial mixins
+			sass_partials: { // sass partials
 				files: 'partials/*.scss',
+				tasks: ['sass','cssmin'],
+				options: {
+					spawn:false,
+					event:['all']
+				},
+			},
+			sass_mixins: { // sass partial mixins
+				files: 'partials/mixins/*.scss',
 				tasks: ['sass','cssmin'],
 				options: {
 					spawn:false,
