@@ -1,0 +1,23 @@
+name: YIKES, Inc. CI Deploy Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+          git fetch --prune --unshallow
+
+    - name: GitHub Action for WP Engine Git Deployment
+      uses: yikesinc/github-action-wpengine-git-deploy@staging
+      env:
+        WPENGINE_SITE_NAME: 'yikesdev'
+        LOCAL_BRANCH: 'staging'
+        WP_ENGINE_ENV: 'production'
+        WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
+        WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
