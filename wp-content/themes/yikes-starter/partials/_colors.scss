@@ -1,0 +1,40 @@
+/* =Color Variables for our theme
+----------------------------------------------- */
+
+// Base theme colors
+
+$white: #fff;
+$black: #000;
+$lightgrey: #ccc;
+$medgrey: #999;
+$darkgrey: #555;
+$green: #5cb85c;
+$blue: #06c;
+
+// Custom theme color palette
+
+$client-blue: #3498db;
+
+// Body background color
+
+$bgcolor: $white;
+
+// Link colors
+
+$link-color:         $blue; 
+$link-hover-color:   lighten( $link-color, 20% );
+$link-focus-color:   $link-hover-color;
+$link-active-color:  $link-hover-color;
+$link-visited-color: $link-color;
+
+// Social colors
+
+$facebook: #3b5998;
+$twitter: #00a0d1;
+$pinterest: #910101;
+$instagram: #675144;
+$gplus: #DD4B39;
+$linkedin: #3399CC;
+$tumblr: #2C4762;
+$vimeo: #445566;
+$youtube: #C4302B;

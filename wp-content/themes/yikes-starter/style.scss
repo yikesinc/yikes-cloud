@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*
+Theme Name: YIKES Starter
+Theme URI: http://yikesinc.com
+Author: YIKES, Inc.
+Author URI: http://yikesinc.com
+Description: The YIKES starter theme - a YIKESified hybred of Underscores with Twitter Bootstrap and custom YIKES functions thrown in. Yeah!
+Version: 5.1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yikes_starter
+Tags: 
+*/
+
+@import 'partials/colors';
+@import 'partials/helpers';
+@import 'partials/mixins';
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+@import 'partials/fonts';
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+/* =Global styles
+----------------------------------------------- */
+
+@import 'partials/globals';
+
+
+/* =Bootstrap Overrides
+----------------------------------------------- */
+
+/* Pagination */
+
+@import 'partials/pagination';
+
+
+/* Buttons */
+
+@import 'partials/buttons';
+
+
+/* Forms */
+
+@import 'partials/forms';
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+/* =Nav Menus
+----------------------------------------------- */
+
+/* Main Nav styles */
+
+@import 'partials/navcolors';
+
+
+/* =Other Header items
+----------------------------------------------- */
+
+@import 'partials/header';
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+/* =Components
+----------------------------------------------- */
+// Globally shared components
+
+@import 'partials/components';
+
+
+/* =Home page
+----------------------------------------------- */
+
+@import 'partials/home';
+
+
+/* =Static pages
+----------------------------------------------- */
+
+@import 'partials/pages';
+
+
+/* =Posts
+----------------------------------------------- */
+
+@import 'partials/posts';
+
+
+/* =Custom Post Types
+----------------------------------------------- */
+
+/* Change events styles */
+
+// @import 'partials/events';
+
+
+/* =Media
+----------------------------------------------- */
+
+@import 'partials/media';
+
+
+/* =Comments
+----------------------------------------------- */
+
+/* Pretty comments */
+
+@import 'partials/comments';
+
+
+/* =Search results
+----------------------------------------------- */
+
+@import 'partials/search';
+
+
+
+/* ==========================================================================
+   Widgetized Areas
+   ========================================================================== */
+
+@import 'partials/widgets';
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+@import 'partials/footer';
+
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+@import 'partials/responsive';

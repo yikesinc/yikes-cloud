@@ -1,0 +1,67 @@
+/* =Typography
+----------------------------------------------- */
+
+// Font Sizes - based on base font of 16px
+
+$basefont: 16px;
+$basefontfamily: 'Open Sans', sans-serif;
+$basefontcolor: $black;
+$basefontweight: 400;
+$baseheight: 1.5;
+
+@mixin body-styles {
+	font-family: $basefontfamily;
+	font-size: $basefont;
+	line-height: $baseheight;
+	font-weight: $basefontweight;
+	color: $basefontcolor;
+}
+
+// Calculate px to rem
+@function calculaterem($size) {
+  $remsize: $size / $basefont;
+  @return #{$remsize}rem;
+}
+
+@mixin fontsize($size) {
+  font-size: $size; // Fallback in px
+  font-size: calculaterem($size);
+}
+
+$headingfontfamily: Georgia, Times, "Times New Roman", serif;
+$headingfontheight: 1.1;
+$headingfontweight: 500;
+$headingfontcolor: $black;
+$headingbmargin: 1rem;
+
+@mixin heading-styles {
+	margin-bottom: $headingbmargin;
+	font-family: $headingfontfamily;
+	font-weight: $headingfontweight;
+	line-height: $headingfontheight;
+	color: $headingfontcolor;
+}
+
+@mixin h1 {
+	@include fontsize(40px);
+}
+
+@mixin h2 {
+ 	@include fontsize(32px);
+}
+
+@mixin h3 {
+	@include fontsize(28px);
+}
+
+@mixin h4 {
+	@include fontsize(24px);
+}
+
+@mixin h5 {
+	@include fontsize(20px);
+}
+
+@mixin h6 {
+	font-size: $basefont;
+}

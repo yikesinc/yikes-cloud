@@ -1,0 +1,286 @@
+/* =Mixins
+----------------------------------------------- */
+
+@mixin border-radius($arguement...) {
+	-webkit-border-radius: $arguement;
+	-moz-border-radius: $arguement;
+	-ms-border-radius: $arguement;
+	-o-border-radius: $arguement;
+	border-radius: $arguement;
+}
+
+@mixin user-select($arguement...) {
+	-webkit-user-select: $arguement;
+	-moz-user-select: $arguement;
+	-ms-user-select: $arguement;
+	-o-user-select: $arguement;
+}
+
+@mixin box-shadow($arguement...) {
+	-webkit-box-shadow: $arguement;
+	box-shadow: $arguement;
+}
+
+@mixin bottom-shadow {
+	@include box-shadow(0px 9px 9px -9px $black);
+}
+
+$startcolor: #1E5799; 
+$endcolor: #7DB9E8; 
+
+@mixin box-gradient-vertical {
+	background: $startcolor; /* Old browsers */
+	background: -moz-linear-gradient(top, $startcolor 0%, $endcolor 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $startcolor 0%,$endcolor 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $startcolor 0%,$endcolor 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $startcolor 0%,$endcolor 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $startcolor 0%,$endcolor 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin box-gradient-horizontal {
+	background: $startcolor; /* Old browsers */
+	background: -moz-linear-gradient(left, $startcolor 0%, $endcolor 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* IE10+ */
+	background: linear-gradient(to right, $startcolor 0%,$endcolor 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=1 ); /* IE6-8 */
+}
+
+@mixin box-transition($arguement...) {
+	-webkit-transition: $arguement;
+	-moz-transition: $arguement;
+	-o-transition: $arguement;
+	transition: $arguement;
+}
+
+@mixin fade {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+@mixin images {
+	padding: 10px;
+} 
+
+@mixin images-border {
+	border: 1px solid $lightgrey;
+	@include box-shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+	padding: 6px;
+} 
+
+@mixin cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin placeholdercolor($arguement...) {
+	::-webkit-input-placeholder {color: $arguement;}
+	:-moz-placeholder {color: $arguement;}
+	::-moz-placeholder {color: $arguement;}
+	:-ms-input-placeholder {color: $arguement;}
+}
+
+@mixin placeholderweight($arguement...) {
+	::-webkit-input-placeholder {font-weight: $arguement;}
+	:-moz-placeholder {font-weight: $arguement;}
+	::-moz-placeholder {font-weight: $arguement;}
+	:-ms-input-placeholder {font-weight: $arguement;}
+}
+
+@mixin placeholdersize($arguement...) {
+	::-webkit-input-placeholder {font-size: $arguement;}
+	:-moz-placeholder {font-size: $arguement;}
+	::-moz-placeholder {font-size: $arguement;}
+	:-ms-input-placeholder {font-size: $arguement;}
+}
+
+@mixin box-transform($arguement...) {
+	-webkit-transform: $arguement;
+	-moz-transform: $arguement;
+	-ms-transform: $arguement;
+	transform: $arguement;
+}
+
+@mixin form-input {
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: $darkgrey;
+	vertical-align: middle;
+	background-color: $white;
+	border: 1px solid $lightgrey;
+	@include border-radius(4px);
+	@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+	@include box-transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s);
+
+	&:focus {
+		border-color: $lightblue;
+		outline: 0;
+		@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6));
+	}
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Like this @include fontawesome-regular("\f0ad");
+@mixin fontawesome-regular($arguement...) {
+	display: none;
+	content: $arguement;
+	font-family: "Font Awesome 5 Regular";
+}
+
+// Like this @include fontawesome-solid("\f0ad");
+@mixin fontawesome-solid($arguement...) {
+	display: none;
+	content: $arguement;
+	font-family: "Font Awesome 5 Solid";
+}
+
+// Like this @include fontawesome-light("\f0ad");
+@mixin fontawesome-light($arguement...) {
+	display: none;
+	content: $arguement;
+	font-family: "Font Awesome 5 Light";
+}
+
+// Like this @include fontawesome-brands("\f0ad");
+@mixin fontawesome-brands($arguement...) {
+	display: none;
+	content: $arguement;
+	font-family: "Font Awesome 5 Brands";
+}
+
+@mixin text-shadow {
+	text-shadow: -1px -2px 3px $black;
+	text-shadow: 2px 3px 3px $black;
+}
+
+@mixin social-icons {
+	&.instagram a:before {
+		@include fontawesome-brands("\f16d");
+	}
+
+	&.twitter a:before {
+		@include fontawesome-brands("\f099");
+	}
+
+	&.facebook a:before {
+		@include fontawesome-brands("\f082");
+	}
+
+	&.youtube a:before {
+		@include fontawesome-brands("\f167");
+	}
+
+	&.vimeo a:before {
+		@include fontawesome-brands("\f27d");
+	}
+
+	&.pinterest a:before {
+		@include fontawesome-brands("\f0d2");
+	}
+
+	&.linkedin a:before {
+		@include fontawesome-brands("\f08c");
+	}
+
+	&.tumblr a:before {
+		@include fontawesome-brands("\f173");
+	}
+
+	&.rss a:before {
+		@include fontawesome-brands("\f09e");
+	}
+
+	&.gplus a:before {
+		@include fontawesome-brands("\f2b3");
+	}
+}
+
+@mixin social-icons2 {
+	&.instagram:before {
+		@include fontawesome-brands("\f16d");
+	}
+
+	&.twitter:before {
+		@include fontawesome-brands("\f099");
+	}
+
+	&.facebook:before {
+		@include fontawesome-brands("\f082");
+	}
+
+	&.youtube:before {
+		@include fontawesome-brands("\f167");
+	}
+
+	&.vimeo:before {
+		@include fontawesome-brands("\f27d");
+	}
+
+	&.pinterest:before {
+		@include fontawesome-brands("\f0d2");
+	}
+
+	&.linkedin:before {
+		@include fontawesome-brands("\f08c");
+	}
+
+	&.tumblr:before {
+		@include fontawesome-brands("\f173");
+	}
+
+	&.rss:before {
+		@include fontawesome-brands("\f09e");
+	}
+
+	&.gplus:before {
+		@include fontawesome-brands("\f2b3");
+	}
+}
+
+@mixin screen-reader {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}

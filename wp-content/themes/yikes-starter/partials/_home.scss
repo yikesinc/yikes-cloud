@@ -1,0 +1,30 @@
+/* =Home page styles
+----------------------------------------------- */
+
+/* Jumbotron */
+.jumbotron.jumbotron-fluid {
+	margin-bottom: 0;
+}
+
+/* Alertbox */
+
+.home .alert {
+	margin: 2em 0;
+
+	.fa {
+		float: left;
+		@include fontsize(28px);
+		margin-right: 1rem;
+		margin-top: 6px;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+/* Content blocks */
+
+section {
+	margin-bottom: 2rem;
+}

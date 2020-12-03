@@ -1,0 +1,34 @@
+/* =Header styles
+----------------------------------------------- */
+
+/* If using a fixed-top navbar */
+
+.site-topheader {
+	background-color: $white;
+	padding: 10px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9;
+
+	.admin-bar & {
+		margin-top: 32px;
+	}
+}
+
+.site-subheader {margin-top: 56px;}
+
+/* If using the search Form */
+
+.search-form {
+	margin-left: 1em;
+
+	.btn.search-submit {
+		border: 0;
+
+		&:hover, &:focus {
+			background-color: $link-hover-color;
+			color: $white;
+		}
+	}
+}

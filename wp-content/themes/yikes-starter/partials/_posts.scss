@@ -1,0 +1,30 @@
+/* =Styles used for all posts
+----------------------------------------------- */
+
+/* =Globals
+----------------------------------------------- */
+
+.blog {
+	.post-container {
+		margin-bottom: 4rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+footer.entry-meta {
+	border-top: 1px solid $lightgrey;
+	margin-top: 2em;
+	padding-top: 1em;
+
+	.footer-entry-meta-item {
+		display: block;
+	}
+
+	.fa {
+		margin-left: 1em;
+		width: 16px;
+	}
+}

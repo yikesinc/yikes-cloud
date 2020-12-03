@@ -1,0 +1,29 @@
+/* =Globally shared components
+----------------------------------------------- */
+
+/* Make sure embeds and iframes fit their containers */
+
+embed, iframe, object {
+	max-width: 100%;
+}
+
+/* Loop styles for loop content */
+
+.site-loop {
+	.card {
+		.card-header {}
+		.card-img-top {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		.card-body {
+			.card-title {}
+			.card-text {
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.card-footer {}
+	}
+}

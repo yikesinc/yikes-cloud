@@ -1,0 +1,156 @@
+/*
+The stylesheet for Gutenberg Blocks in the editor
+*/
+/* =Color Variables for our theme
+----------------------------------------------- */
+/* = Global and Primary styles
+----------------------------------------------- */
+/* =Global mixins
+----------------------------------------------- */
+/* Links */
+/* HTML Elements */
+/* =Typography
+----------------------------------------------- */
+/* ==========================================================================
+   Editor Styles
+   ========================================================================== */
+/* Content editor width */
+body.wp-admin.block-editor-page .editor-styles-wrapper .block-editor-block-list__layout {
+  margin: 0 auto;
+  width: 1170px;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .block-editor-block-list__layout .wp-block {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+body.wp-admin.block-editor-page .edit-post-visual-editor__post-title-wrapper {
+  margin: 0 auto;
+  width: 1170px;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.wp-admin.block-editor-page .edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+body.wp-admin.block-editor-page .editor-styles-wrapper {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000;
+  /* Links */
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper a {
+  color: #06c;
+  text-decoration: none;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper a:visited {
+  color: #06c;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper a:hover, body.wp-admin.block-editor-page .editor-styles-wrapper a:focus, body.wp-admin.block-editor-page .editor-styles-wrapper a:active {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+/* =Typography
+----------------------------------------------- */
+/* Headings */
+body.wp-admin.block-editor-page .editor-styles-wrapper .editor-post-title__input, body.wp-admin.block-editor-page .editor-styles-wrapper h1, body.wp-admin.block-editor-page .editor-styles-wrapper h2, body.wp-admin.block-editor-page .editor-styles-wrapper h3, body.wp-admin.block-editor-page .editor-styles-wrapper h4, body.wp-admin.block-editor-page .editor-styles-wrapper h5, body.wp-admin.block-editor-page .editor-styles-wrapper h6 {
+  margin-bottom: 1rem;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #000;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .editor-post-title__input {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper h2, body.wp-admin.block-editor-page .editor-styles-wrapper .h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper h3, body.wp-admin.block-editor-page .editor-styles-wrapper .h3 {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper h4, body.wp-admin.block-editor-page .editor-styles-wrapper .h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper h5, body.wp-admin.block-editor-page .editor-styles-wrapper .h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper h6, body.wp-admin.block-editor-page .editor-styles-wrapper .h6 {
+  font-size: 16px;
+}
+
+/* =Core blocks
+----------------------------------------------- */
+body.wp-admin.block-editor-page .editor-styles-wrapper {
+  /* paragraph */
+  /* Buttons */
+  /* Blockquotes */
+  /* Lists */
+  /* Seperator (hr) block */
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link {
+  border: 3px solid transparent;
+  border-radius: 0;
+  transition: all 0.3s;
+  font-size: 16px;
+  padding: .375rem .75rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link, body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link:visited {
+  background-color: #06c;
+  border-color: #06c;
+  color: #fff;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link.active, body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link.focus, body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link:active, body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus, body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
+  background-color: #fff;
+  border-color: #06c;
+  color: #06c;
+  transition: all 0.3s;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper blockquote {
+  border-left: 3px solid #999;
+  color: #555;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin: 0 0 1em;
+  padding-left: 1em;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper blockquote .wp-block-quote__citation, body.wp-admin.block-editor-page .editor-styles-wrapper blockquote cite {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .block-editor-block-list__block ol, body.wp-admin.block-editor-page .editor-styles-wrapper .block-editor-block-list__block ul, body.wp-admin.block-editor-page .editor-styles-wrapper .block-editor-block-list__block dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+body.wp-admin.block-editor-page .editor-styles-wrapper .wp-block-separator {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=style-editor.css.map */

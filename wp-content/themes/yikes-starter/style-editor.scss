@@ -1,0 +1,138 @@
+@charset "utf-8";
+/*
+The stylesheet for Gutenberg Blocks in the editor
+*/
+
+@import 'partials/colors';
+@import 'partials/mixins/buttons';
+@import 'partials/mixins/globals';
+@import 'partials/mixins/typography';
+
+/* ==========================================================================
+   Editor Styles
+   ========================================================================== */
+
+/* Content editor width */
+body.wp-admin.block-editor-page {
+	.editor-styles-wrapper {
+		.block-editor-block-list__layout {
+			margin: 0 auto;
+			width: 1170px;
+			padding-left: 0;
+			padding-right: 0;
+
+			.wp-block {
+				margin-left: 0;
+				margin-right: 0;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.edit-post-visual-editor__post-title-wrapper {
+		margin: 0 auto;
+		width: 1170px;
+		padding-left: 0;
+		padding-right: 0;
+
+		.editor-post-title {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+body.wp-admin.block-editor-page {
+	.editor-styles-wrapper {
+		@include body-styles;
+
+		/* Links */
+
+		a {
+			@include link-styles;
+		}
+	}
+}
+
+
+/* =Typography
+----------------------------------------------- */
+
+/* Headings */
+
+body.wp-admin.block-editor-page {
+	.editor-styles-wrapper {
+		.editor-post-title__input, h1, h2, h3, h4, h5, h6 {
+			@include heading-styles;
+		}
+
+		.editor-post-title__input { // These are the H1 styles.
+			@include h1;
+		}
+
+		h2, .h2 {
+			@include h2;
+		}
+
+		h3, .h3 {
+			@include h3;
+		}
+
+		h4, .h4 {
+			@include h4;
+		}
+
+		h5, .h5 {
+			@include h5;
+		}
+
+		h6, .h6 {
+			@include h6;
+		}
+	}
+}
+
+/* =Core blocks
+----------------------------------------------- */
+
+body.wp-admin.block-editor-page {
+	.editor-styles-wrapper {
+
+		/* paragraph */
+		p {
+			@include paragraph;
+		}
+
+		/* Buttons */
+		.wp-block-button {
+			.wp-block-button__link {
+				@include button-global;
+				@include button-primary;
+			}
+		}
+
+		/* Blockquotes */
+
+		blockquote {
+			@include blockquote;
+		}
+
+		/* Lists */
+
+		.block-editor-block-list__block {
+			@include list-block;
+		}
+
+		/* Seperator (hr) block */
+
+		.wp-block-separator {
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/* =Bootstrap pagination styles
+----------------------------------------------- */
+
+.pagination {
+	margin-top: 2em;
+
+	.page-item {
+		color: $blue;
+		vertical-align: bottom;
+
+		.page-link {
+			.svg-inline--fa {
+				color: $blue;
+			}
+			&:focus {
+				box-shadow: 0 0 0 .2rem $blue;
+			}
+
+			&:hover {
+				background-color: $blue;
+				color: $white;
+
+				.svg-inline--fa {
+					color: $white;
+				}
+			}
+		}
+
+		.page-link,
+		&:first-child .page-link,		
+		&:last-child .page-link {
+			@include border-radius(0);
+		}
+		&.first {}
+		&.previous {}
+		&.active {
+			.page-link {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+		&.next {}
+		&.last {}
+	}
+}

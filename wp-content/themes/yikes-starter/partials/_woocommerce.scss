@@ -1,0 +1,415 @@
+/* =WooCommerce styles
+----------------------------------------------- */
+
+
+/* Category Pages
+========================= */
+
+/* Global Elements */
+
+.woocommerce {
+	.woocommerce-info {
+		border-top: 0;
+	}
+
+	.woocommerce-breadcrumb {
+		border-bottom: 1px solid $medgrey;
+		margin: 1em 0;
+
+		a {      
+			color: $link-color;
+			&:visited {
+				color: $link-color;
+			}
+			&:hover, &:focus, &:active {
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+
+/* This hides breadcrumbs on the main shop page */
+.woocommerce.post-type-archive.post-type-archive-product .woocommerce-breadcrumb {
+	display: none;
+}
+
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit,
+.woocommerce ul.products li.product .button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order { 
+
+	&, &:visited {
+
+		&.active, &.focus, &:active, &:focus, &:hover {}
+	}
+}
+
+
+.woocommerce .woocommerce-message a.button {
+	display: inline-block;
+}
+
+
+
+/* Alerts */
+
+.woocommerce {
+	.woocommerce-message, .woocommerce-error, .woocommerce-info {
+		background-color: transparent;
+		border-top: 0;
+		border-top-color: transparent;
+		color: $black;
+		margin-bottom: 0 !important;
+
+		.button {}
+	}
+}
+
+
+/* Main shop page / Product Category Pages  */
+
+.woocommerce ul.products {
+
+	li.first {
+		clear: none;
+	}
+
+	li.product {
+		margin-bottom: 2em;
+
+		.product-image-wrapper {
+			overflow: hidden;
+			height: 208px;
+			width: 100%;
+		}
+
+		.onsale {
+			min-width: 3.5em;
+			z-index: 9;
+		}
+		
+		a {
+			img {
+				margin: 0;
+			}
+
+			h3, .woocommerce-loop-category__title,
+			.woocommerce-loop-product__title {
+				font-size: 0.9em;
+				height: 50px;
+				line-height: 1.1;
+				padding-bottom: 0;
+				padding-top: 8px;
+				text-align: center;
+				
+				mark {
+					display: none;
+				}
+			}
+
+			.price {
+				color: $black;
+				display: none;
+			}
+		}
+	}
+}
+
+.woocommerce ul.products li.product .button {
+	display: none;
+	font-size: 0.8em;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.woocommerce .woocommerce-ordering, 
+.woocommerce-page .woocommerce-ordering {}
+
+
+
+/* Single Product Pages */
+
+.zoomWindow {
+	cursor: zoom-in !important;
+	pointer-events:none;
+}
+
+.woocommerce div.product {
+
+	.product_title {
+		line-height: 1;
+	}
+
+	&.product-type-variable {
+		p.price {
+			display: none;
+		}
+	}
+
+	p.price, span.price {
+		color: $cporange;
+	}
+
+	form.cart {
+		.variations {
+
+			tr {
+				height: 40px;
+			}
+
+			td {
+				line-height: 1;
+				vertical-align: middle;
+			}
+
+			td.label {
+				padding: 0;
+			}
+
+			label {
+				color: $black;
+				margin-bottom: 0;
+				padding-right: 0.6em;
+				text-align: right;
+				width: 100%;
+			}
+		}
+
+		.woocommerce-variation {
+			text-align: center;
+
+			.woocommerce-variation-price {
+				font-weight: 500;
+				height: 60px;
+			}
+		}
+
+		.woocommerce-variation-add-to-cart {
+			text-align: center;
+
+			div.quantity {
+				display: inline-block;
+				float: none;
+				vertical-align: top;
+			}
+
+			.button, .button:visited {
+				float: none;
+				display: inline-block;
+				font-size: 0.86em;
+				font-weight: 400;
+				text-transform: uppercase;
+				vertical-align: top;
+
+				&.active, &.focus, &:active, &:focus, &:hover {}
+			}
+		}
+	}
+
+	.product_meta {
+		.sku_wrapper, .posted_in {
+			display: block;
+		}
+	}
+
+}
+
+.woocommerce div.product .woocommerce-tabs {
+	ul.tabs {
+		margin: 0 0 1em;
+
+		li a {}
+	}
+
+	.panel {
+		padding: 0 1em;
+
+		h2 {}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		ul {
+			margin-bottom: 1em;
+
+			li {
+				display: inline-block;
+				margin-bottom: 0;
+
+				&:before {
+					@include fontawesome("\f111");
+					font-size: 0.5em;
+					margin: 0 8px 0;
+				}        
+			}
+		}
+	}
+}
+
+
+
+
+/* Cart */
+
+.woocommerce, .woocommerce-page {
+	table.shop_table {
+		font-size: 0.8em;
+	}
+
+	td.product-name {
+		dl.variation {
+			margin: 0;
+
+			dd {
+				margin-bottom: 0;
+			}
+
+			dt {
+				font-weight: 400;
+			}
+		}
+	}
+
+	.cart {
+		.button, input.button {
+			float: right;
+		}
+	}
+
+	table.cart, #content table.cart {
+		img {
+			width: 60px;
+		}
+
+		td.product-name {
+			a {}
+		}
+
+		td.actions {
+			.input-text#coupon_code {
+				width: 200px;
+			}
+		}
+	}
+}
+
+.woocommerce-cart {
+	.wc-proceed-to-checkout {
+		a.checkout-button {}
+	}
+}
+
+
+/* Checkout */
+
+.woocommerce #customer_details, .woocommerce-checkout #payment {}
+
+#add_payment_method .checkout .col-2 h3#ship-to-different-address, 
+.woocommerce-cart .checkout .col-2 h3#ship-to-different-address, 
+.woocommerce-checkout .checkout .col-2 h3#ship-to-different-address {
+	font-size: 1em;
+	line-height: 1.3;
+	margin-bottom: 27px;
+	margin-top: 0;
+	text-transform: none;
+}
+
+.woocommerce, .woocommerce-page {
+	form {
+		.form-row {
+			label {
+				line-height: 1.2;
+			}
+		}
+	}
+}
+
+.woocommerce table.shop_table {
+	td {
+
+		&.product-name {
+
+			dl.variation {
+				color: $black;
+				font-size: 0.9em;
+				font-weight: 200;
+				text-transform: none;
+
+				dt, dd {
+					&:first-of-type {
+						margin-top: 0.4em;
+					}
+				}
+			}
+
+			strong.product-quantity {
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+.woocommerce-checkout #payment {
+	margin-top: 3em;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+	float: right;
+}
+
+/* Sidebar and Widgets */
+
+.col-sm-2.casa-woo-sidebar {
+	padding-left: 0;
+}
+
+.widget.woocommerce {
+	font-size: 0.8em;
+
+	&.widget_product_tag_cloud .tagcloud {
+		a {
+			display: block;
+			font-size: 14px !important;
+		}
+	}
+
+	.widget_shopping_cart_content {
+		p.buttons {
+			a.button {
+				display: inline-block;
+				font-size: .78em;
+				padding: .618em;
+			}
+		}
+	}
+}
+
+.woocommerce .widget_shopping_cart .cart_list li, .woocommerce.widget_shopping_cart .cart_list li {
+	padding-left: 1.4em;
+
+	&.empty {
+		padding-left: 0;
+	}
+}
+
+.woocommerce ul.cart_list li dl, .woocommerce ul.product_list_widget li dl {
+	margin: 0.8em 0 0 0;
+	padding-left: 0.4em;
+}
+
+.woocommerce ul.cart_list li dl {
+	dt, dd {
+		display: block;
+		float: none;
+	}
+
+	dt {
+		line-height: 1.1;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+	dd {
+		margin-bottom: 0.4em;
+	}
+}

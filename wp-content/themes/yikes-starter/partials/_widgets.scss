@@ -1,0 +1,53 @@
+/* =Widget styles
+----------------------------------------------- */
+
+/* Global */
+
+h2.widget-title {}
+
+
+.widget {
+	margin: 0 0 2em;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+/* Search widget */
+
+.widget_search {
+	.btn.search-submit {
+		border: 1px;
+	}
+}
+
+/* YIKES Recent Posts widget */
+
+.widget_yikes_recent_posts_widget ul {
+	padding: 0;
+	list-style: none;
+
+	li {
+		min-height: 120px;
+		img {
+			max-width: 100px;
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			@include fontsize(18px);
+			line-height: 1;
+			font-weight: 500;
+			margin: 0;
+		}
+	}
+}
+
+/* Sidebar Widgets */
+
+.sidebar-widgets {}
+
+/* Footer Widgets */
+
+.footer-widgets {}

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+/* Login Screen Logo */
+
+#login, .login {
+	padding: 0;
+	
+	h1 {
+		a {
+			background: url(../images/logo-login.png) no-repeat bottom center;
+			background-size: contain;
+			width: 320px;
+			height: 225px;
+			margin: 0 auto 2rem;
+		}
+	}
+}

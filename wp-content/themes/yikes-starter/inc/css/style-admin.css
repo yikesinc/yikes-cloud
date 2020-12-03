@@ -1,0 +1,9 @@
+/* Login Screen Logo */
+#login h1 a, .login h1 a {
+  background: url(../images/logo-login.png) no-repeat bottom center;
+  background-size: contain;
+  width: 320px;
+  height: 225px;
+  margin: 0 auto 2rem; }
+
+/*# sourceMappingURL=style-admin.css.map */

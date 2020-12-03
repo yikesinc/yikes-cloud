@@ -1,0 +1,40 @@
+/* =Global styles
+----------------------------------------------- */
+
+@import 'mixins/globals';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: $bgcolor;
+	@include body-styles;
+}
+
+/* Links */
+
+a {
+	@include link-styles;
+}
+
+/* HTML Elements */
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+blockquote {
+	@include blockquote;
+}
+
+.entry-content {
+	@include list-block;
+}
+
+/* Accessibility */
+
+.screen-reader-text {
+	@include screen-reader;
+}

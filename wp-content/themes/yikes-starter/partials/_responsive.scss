@@ -1,0 +1,94 @@
+/* =Responsive styles
+----------------------------------------------- */
+
+/*
+*
+* Retina-specific styling
+*
+*/
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {}
+
+/*
+*
+* Mobile-first breakpoints
+*
+*/
+// Extra small devices (portrait phones, 576px or fewer)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+/*
+*
+* Desktop-first breakpoints
+*
+*/
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+// Large devices (desktops, 1200px or fewer)
+@media (max-width: 1200px) {}
+
+// Medium devices (tablets, 992px or fewer)
+@media (max-width: 992px) {
+	#masthead .navbar {
+		display: block;
+
+		.nav {
+			float: none;
+			margin-top: 0;
+			text-align: center;
+
+			& > li {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.open .dropdown-menu {
+				background-color: $white;
+				position: absolute;
+			}
+		}
+	}
+}
+
+// Small devices (landscape phones, 768px or fewer)
+@media (max-width: 768px) {}
+
+// Extra small devices (portrait phones, 576px or fewer)
+@media (max-width: 576px) {}
+
+
+
+/*
+*
+* Individual breakpoints
+*
+*/
+// Extra small devices (portrait phones, 576px or fewer)
+@media (max-width: 576px) {}
+
+// Small devices (landscape phones, from 576px to 767px)
+@media (min-width: 576px) and (max-width: 767px) {}
+
+// Medium devices (tablets, from 768px to 991px)
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Large devices (desktops, from 992px to 1199px)
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

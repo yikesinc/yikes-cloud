@@ -1,0 +1,150 @@
+/* =Custom Nav styles
+----------------------------------------------- */
+
+/* Main Nav */
+
+.navbar.main-nav {
+	background-color: $black;
+
+	.navbar-nav {
+		flex-wrap: wrap
+	}
+
+	ul.navbar-nav {		
+		margin-top: 0;
+
+		& > li  {
+			&.nav-item {
+				/* Style for inactive links */
+				& > .nav-link  {
+					background-color: $white;
+					border: 0;
+					color: $blue;
+					white-space: nowrap;
+				}
+
+				/* Style for active links */
+				&.current-menu-item > .nav-link, &.current-menu-parent > .nav-link, 
+				&.current-menu-ancestor > .nav-link, .single-post &.current_page_parent > .nav-link,
+				&:hover > .nav-link, &:focus > .nav-link, &:active > .nav-link,
+				&.show > .nav-link.dropdown-toggle {
+					background-color: $blue;
+					color: $white;
+				}
+
+				/* Example of using the search icon with screenreader text */
+				&.search > .nav-link {
+					&:before {
+						@include fontawesome-solid("\f002");
+					}
+					.menu-link-text {
+						@include screen-reader;
+					}
+				}
+
+				/* Secondary Menus */        
+				& > ul.dropdown-menu {
+					background-color: $white;
+
+					& > li.nav-item {
+
+						/* Style for inactive links on submenus */
+						.dropdown-item {
+							background-color: $white;
+							color: $blue;	
+						}
+
+						/* Style for active links on submenus */
+						&.current-menu-parent > .dropdown-item, 
+						&.active > .dropdown-item, &:hover > .dropdown-item, &:focus > .dropdown-item {
+							background-color: $blue;
+							color: $white;
+						}
+
+						/* Add a Tertiary menu indicator icon */
+						&.menu-item-has-children > .dropdown-item {
+							&:after {
+								@include fontawesome-solid("\f054");
+							}
+
+							.svg-inline--fa {
+								margin-left: 8px;
+							}
+						}
+
+						/* Tertiary Menus - reveal them on parent hover */
+						&.dropdown {
+							& > ul.dropdown-menu.show {
+								background-color: $white;
+								display: block;
+								left: 100%;
+								top: -11px;
+
+								& > li.nav-item {
+
+									/* Style for inactive links on tertiary submenus */
+									.dropdown-item {
+										background-color: $white;
+										color: $blue;
+									}
+
+									/* Style for active links on tertiary submenus */
+									&.current-menu-parent > .dropdown-item, 
+									&.active > .dropdown-item, &:hover > .dropdown-item, &:focus > .dropdown-item {
+										background-color: $blue;
+										color: $white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	} 
+}
+
+
+/* YIKES Social Nav */
+
+#social-navigation,
+.widget_nav_menu .menu-social-menu-container {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			
+			.svg-inline--fa {
+				color: $blue;
+				@include fontsize(32px);
+
+				&:hover, &:focus {
+					color: darken( $blue , 10% );
+				}
+			}
+		}
+	}
+}
+
+
+/* Social Nav used in the footer */
+#social-navigation ul li {
+	@include social-icons;
+}
+
+/* Social Nav used in the Nav widget */
+
+.widget_nav_menu .menu-social-menu-container ul li {
+	a { 
+		@include screen-reader;
+
+		&:after {
+			content: ', opens in new tab';
+		}
+	}
+
+	@include social-icons2;
+}

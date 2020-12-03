@@ -1,0 +1,40 @@
+/* =Custom CSS for Events
+----------------------------------------------- */
+
+/* Shortcode List View Styles */
+
+ul.yks_ee_events-list-view {
+
+	li.yks_ee_events-list-item {
+
+		.event-image {
+			img {}
+		}
+
+		h2.yks_ee_events-title {}
+
+		.yks_ee_events-list-item-meta {
+
+			.yks_ee_events-list-item-meta-date {}
+			.yks_ee_events-list-item-meta-time {}
+
+			.yks_ee_events-list-item-meta-location {
+
+				.event-location-address {
+					.event-location-address-title {}
+					.event-location-address-address {}
+					.event-location-address-cityzip {}
+				}
+			}
+		}
+
+		.yks_ee_events-list-item-content {
+
+			.event-content {
+				p:last-of-type {}
+			}
+		}
+			
+		.event-link {}
+	}
+}

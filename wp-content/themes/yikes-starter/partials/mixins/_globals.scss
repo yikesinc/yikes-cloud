@@ -1,0 +1,48 @@
+/* =Global mixins
+----------------------------------------------- */
+
+/* Links */
+
+@mixin link-styles {	
+	color: $link-color;
+	text-decoration: none;
+
+	&:visited {
+		color: $link-color;
+	}
+
+	&:hover, &:focus, &:active {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+}
+
+/* HTML Elements */
+
+@mixin paragraph {	
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+@mixin blockquote {
+	border-left: 3px solid $medgrey;
+	color: $darkgrey;
+	font-family: Georgia, Times, "Times New Roman", serif;  
+	@include fontsize(20px);
+	margin: 0 0 1em;
+	padding-left: 1em;
+
+	.wp-block-quote__citation, cite {
+		color: $basefontcolor;
+		font-family: $basefontfamily;
+		@include fontsize(14px);
+		font-style: normal;
+	}
+}
+
+@mixin list-block {
+	ol, ul, dl {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+}

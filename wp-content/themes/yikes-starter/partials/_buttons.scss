@@ -1,0 +1,40 @@
+/* =Bootstrap button styles
+----------------------------------------------- */
+
+@import 'mixins/buttons';
+
+/* Gutenberg button block */
+.wp-block-button {
+	.wp-block-button__link {
+		@include button-global;
+        @include button-primary;
+	}
+}
+
+/* Global styles for all the buttons  */
+
+a.btn, button.btn, input[type="button"].btn, input[type="submit"].btn,
+button, input[type="button"], input[type="submit"] {
+	@include button-global;
+}
+
+/* Color styles for specific button classes  */
+
+button, input[type="button"], input[type="submit"], // keep this line for the defaut button style 
+a.btn-primary, button.btn-primary, input[type="button"].btn-primary, input[type="submit"].btn-primary {
+	@include button-primary;
+}
+
+a.btn-outline-primary, button.btn-outline-primary, input[type="button"].btn-outline-primary, input[type="submit"].btn-outline-primary {
+	&, &:visited {
+		background-color: $white;
+		border-color: $blue;
+		color: $blue;
+	}
+
+	&.active, &.focus, &:active, &:focus, &:hover {
+		background-color: $blue;
+		border-color: $blue;
+		color: $white;
+	}
+}
