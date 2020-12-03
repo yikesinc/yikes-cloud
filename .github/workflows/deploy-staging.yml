@@ -16,7 +16,7 @@ jobs:
     - name: GitHub Action for WP Engine Git Deployment
       uses: yikesinc/github-action-wpengine-git-deploy@staging
       env:
-        WPENGINE_SITE_NAME: 'yikesdev'
+        WPENGINE_SITE_NAME: 'yikesclouddev'
         LOCAL_BRANCH: 'staging'
         WP_ENGINE_ENV: 'production'
         WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}

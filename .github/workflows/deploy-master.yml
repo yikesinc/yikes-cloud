@@ -1,9 +1,9 @@
-name: YIKES, Inc. CI Deploy Master
+name: YIKES, Inc. CI Deploy Main
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -14,10 +14,10 @@ jobs:
           git fetch --prune --unshallow
 
     - name: GitHub Action for WP Engine Git Deployment
-      uses: yikesinc/github-action-wpengine-git-deploy@master
+      uses: yikesinc/github-action-wpengine-git-deploy@main
       env:
         WPENGINE_SITE_NAME: 'yikescloud'
-        LOCAL_BRANCH: 'master'
+        LOCAL_BRANCH: 'main'
         WP_ENGINE_ENV: 'production'
         WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
         WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
