@@ -14,10 +14,10 @@ jobs:
           git fetch --prune --unshallow
 
     - name: GitHub Action for WP Engine Git Deployment
-      uses: yikesinc/github-action-wpengine-git-deploy@main
+      uses: yikesinc/github-action-wpengine-git-deploy@master
       env:
         WPENGINE_SITE_NAME: 'yikescloud'
-        LOCAL_BRANCH: 'main'
+        LOCAL_BRANCH: 'master'
         WP_ENGINE_ENV: 'production'
         WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
         WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
