@@ -14,7 +14,7 @@ jobs:
           git fetch --prune --unshallow
 
     - name: GitHub Action for WP Engine Git Deployment
-      uses: yikesinc/github-action-wpengine-git-deploy@staging
+      uses: yikesinc/github-action-wpengine-git-deploy@master
       env:
         WPENGINE_SITE_NAME: 'yikesclouddev'
         LOCAL_BRANCH: 'staging'
