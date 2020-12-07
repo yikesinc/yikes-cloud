@@ -15,7 +15,7 @@
 
 <?php wp_head(); ?>
 </head>
-<!-- Ebonie -->
+
 <body <?php body_class(); ?>>
 
 <?php wp_body_open(); ?>
